@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/securestash
+
+upload:
+  directory: ./uploads
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  health:
+    mongo:
+      enabled: true
